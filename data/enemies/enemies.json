@@ -1,0 +1,146 @@
+{
+  "enemies": [
+    {
+      "id": "enemy_sheep_1",
+      "name": "迷える羊",
+      "hp": 200,
+      "attack": 30,
+      "defense": 15,
+      "speed": 40,
+      "imageKey": "enemy_sheep",
+      "skills": []
+    },
+    {
+      "id": "enemy_sheep_2",
+      "name": "眠れない羊",
+      "hp": 300,
+      "attack": 45,
+      "defense": 20,
+      "speed": 45,
+      "imageKey": "enemy_sheep",
+      "skills": []
+    },
+    {
+      "id": "enemy_nightmare_imp",
+      "name": "ナイトメアインプ",
+      "hp": 400,
+      "attack": 60,
+      "defense": 25,
+      "speed": 55,
+      "imageKey": "enemy_imp",
+      "skills": ["enemy_skill_scratch"]
+    },
+    {
+      "id": "enemy_shadow_wisp",
+      "name": "シャドウウィスプ",
+      "hp": 250,
+      "attack": 70,
+      "defense": 10,
+      "speed": 70,
+      "imageKey": "enemy_wisp",
+      "skills": []
+    },
+    {
+      "id": "enemy_sleep_eater",
+      "name": "スリープイーター",
+      "hp": 500,
+      "attack": 55,
+      "defense": 35,
+      "speed": 50,
+      "imageKey": "enemy_eater",
+      "skills": ["enemy_skill_drain"]
+    },
+    {
+      "id": "enemy_insomnia_ghost",
+      "name": "インソムニアゴースト",
+      "hp": 350,
+      "attack": 80,
+      "defense": 20,
+      "speed": 65,
+      "imageKey": "enemy_ghost",
+      "skills": ["enemy_skill_curse"]
+    },
+    {
+      "id": "boss_night_terror",
+      "name": "ナイトテラー",
+      "hp": 2000,
+      "attack": 120,
+      "defense": 60,
+      "speed": 55,
+      "imageKey": "boss_terror",
+      "skills": ["boss_skill_terror", "boss_skill_nightmare"]
+    },
+    {
+      "id": "boss_sleep_demon",
+      "name": "スリープデーモン",
+      "hp": 3500,
+      "attack": 150,
+      "defense": 80,
+      "speed": 45,
+      "imageKey": "boss_demon",
+      "skills": ["boss_skill_devour", "boss_skill_darkness"]
+    },
+    {
+      "id": "weekend_boss_dream_dragon",
+      "name": "ドリームドラゴン",
+      "hp": 50000,
+      "attack": 200,
+      "defense": 100,
+      "speed": 60,
+      "imageKey": "boss_dragon",
+      "skills": ["weekend_skill_breath", "weekend_skill_roar", "weekend_skill_claw"]
+    }
+  ],
+  "enemySkills": [
+    {
+      "id": "enemy_skill_scratch",
+      "name": "ひっかき",
+      "effects": [{ "type": "damage", "value": 1.2 }]
+    },
+    {
+      "id": "enemy_skill_drain",
+      "name": "睡眠吸収",
+      "effects": [{ "type": "damage", "value": 1.0 }, { "type": "heal", "value": 0.5 }]
+    },
+    {
+      "id": "enemy_skill_curse",
+      "name": "不眠の呪い",
+      "effects": [{ "type": "debuff", "value": 20, "buffStat": "speed", "duration": 3 }]
+    },
+    {
+      "id": "boss_skill_terror",
+      "name": "恐怖の叫び",
+      "effects": [{ "type": "debuff", "value": 30, "buffStat": "attack", "duration": 2 }]
+    },
+    {
+      "id": "boss_skill_nightmare",
+      "name": "ナイトメアウェーブ",
+      "effects": [{ "type": "damage", "value": 1.5 }]
+    },
+    {
+      "id": "boss_skill_devour",
+      "name": "睡眠捕食",
+      "effects": [{ "type": "damage", "value": 2.0 }]
+    },
+    {
+      "id": "boss_skill_darkness",
+      "name": "深淵の闇",
+      "effects": [{ "type": "damage", "value": 1.3 }, { "type": "debuff", "value": 25, "buffStat": "defense", "duration": 3 }]
+    },
+    {
+      "id": "weekend_skill_breath",
+      "name": "ドリームブレス",
+      "effects": [{ "type": "damage", "value": 1.8 }]
+    },
+    {
+      "id": "weekend_skill_roar",
+      "name": "竜の咆哮",
+      "effects": [{ "type": "debuff", "value": 20, "buffStat": "attack", "duration": 2 }, { "type": "debuff", "value": 20, "buffStat": "defense", "duration": 2 }]
+    },
+    {
+      "id": "weekend_skill_claw",
+      "name": "破滅の爪",
+      "effects": [{ "type": "damage", "value": 2.5 }]
+    }
+  ]
+}

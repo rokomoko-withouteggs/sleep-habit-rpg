@@ -1,0 +1,365 @@
+.gacha-page {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.page-title {
+  font-size: 24px;
+  font-weight: 700;
+  text-align: center;
+}
+
+/* バナー選択 */
+.banner-selector {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding-bottom: 8px;
+}
+
+.banner-tab {
+  padding: 10px 16px;
+  background: var(--bg-card);
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+  transition: var(--transition);
+}
+
+.banner-tab:hover {
+  background: var(--bg-card-hover);
+}
+
+.banner-tab.active {
+  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+  color: white;
+}
+
+/* バナー表示 */
+.banner-display {
+  background: linear-gradient(135deg, #1a1a2e, #252542);
+  overflow: hidden;
+}
+
+.banner-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.banner-header h2 {
+  font-size: 20px;
+}
+
+.pickup-badge {
+  padding: 4px 12px;
+  background: linear-gradient(135deg, #fbbf24, #f59e0b);
+  color: black;
+  font-size: 12px;
+  font-weight: 700;
+  border-radius: 20px;
+}
+
+.banner-description {
+  font-size: 14px;
+  color: var(--text-secondary);
+  margin-bottom: 16px;
+}
+
+.banner-visual {
+  display: flex;
+  justify-content: center;
+  padding: 32px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+
+.banner-image {
+  font-size: 80px;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.pity-info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+.pity-bar {
+  height: 8px;
+  background: var(--bg-dark);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.pity-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
+  transition: width 0.3s ease;
+}
+
+/* ガチャボタン */
+.gacha-buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.gacha-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 20px;
+  border-radius: 12px;
+  transition: var(--transition);
+}
+
+.gacha-btn.single {
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+}
+
+.gacha-btn.multi {
+  background: linear-gradient(135deg, #fbbf24, #f59e0b);
+  color: black;
+}
+
+.gacha-btn:hover:not(:disabled) {
+  transform: scale(1.02);
+}
+
+.gacha-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn-label {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.btn-cost {
+  font-size: 14px;
+}
+
+.btn-bonus {
+  font-size: 10px;
+  opacity: 0.8;
+}
+
+/* ドリームストーン表示 */
+.dreamstone-info {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  font-size: 16px;
+}
+
+.dreamstone-value {
+  font-weight: 700;
+  color: #a78bfa;
+}
+
+/* 排出率 */
+.rate-info {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.rate-info h3 {
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+
+.rate-list {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 8px;
+}
+
+.rate-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.rate-item span:first-child {
+  font-weight: 700;
+}
+
+.rate-note {
+  font-size: 12px;
+  color: var(--text-muted);
+  text-align: center;
+}
+
+/* ガチャアニメーション */
+.gacha-animation-overlay {
+  position: fixed;
+  inset:0;
+   background: rgba(0, 0, 0, 0.9);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   z-index: 1000;
+ }
+ 
+ .gacha-animation {
+   text-align: center;
+ }
+ 
+ .gacha-orb {
+   font-size: 100px;
+   animation: gachaSpin 1s linear infinite;
+ }
+ 
+ @keyframes gachaSpin {
+   0% { transform: rotate(0deg) scale(1); }
+   50% { transform: rotate(180deg) scale(1.2); }
+   100% { transform: rotate(360deg) scale(1); }
+ }
+ 
+ .gacha-animation p {
+   margin-top: 20px;
+   font-size: 18px;
+   color: var(--text-secondary);
+ }
+ 
+ /* 結果表示 */
+ .gacha-results-overlay {
+   position: fixed;
+   inset: 0;
+   background: rgba(0, 0, 0, 0.9);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   z-index: 1000;
+   padding: 20px;
+ }
+ 
+ .gacha-results {
+   background: var(--bg-card);
+   border-radius: 16px;
+   padding: 24px;
+   max-width: 450px;
+   width: 100%;
+   max-height: 90vh;
+   overflow-y: auto;
+   text-align: center;
+ }
+ 
+ .gacha-results h2 {
+   margin-bottom: 20px;
+ }
+ 
+ .results-grid {
+   display: grid;
+   grid-template-columns: repeat(5, 1fr);
+   gap: 8px;
+   margin-bottom: 24px;
+ }
+ 
+ .result-item {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 4px;
+   padding: 12px 8px;
+   background: var(--bg-dark);
+   border-radius: 8px;
+   position: relative;
+   animation: resultAppear 0.5s ease backwards;
+ }
+ 
+ @keyframes resultAppear {
+   from {
+     opacity: 0;
+     transform: scale(0.5) rotateY(90deg);
+   }
+   to {
+     opacity: 1;
+     transform: scale(1) rotateY(0deg);
+   }
+ }
+ 
+ .result-item.rarity-ssr {
+   background: linear-gradient(135deg, rgba(251, 191, 36, 0.2), rgba(245, 158, 11, 0.1));
+   border: 2px solid #fbbf24;
+   animation: resultAppear 0.5s ease backwards, glow 2s infinite;
+ }
+ 
+ .result-item.rarity-sr {
+   background: linear-gradient(135deg, rgba(168, 85, 247, 0.2), rgba(124, 58, 237, 0.1));
+   border: 2px solid #a855f7;
+ }
+ 
+ .result-item.rarity-r {
+   background: linear-gradient(135deg, rgba(59, 130, 246, 0.2), rgba(37, 99, 235, 0.1));
+   border: 2px solid #3b82f6;
+ }
+ 
+ .result-item.rarity-n {
+   border: 1px solid rgba(255, 255, 255, 0.1);
+ }
+ 
+ .new-badge {
+   position: absolute;
+   top: -8px;
+   right: -8px;
+   padding: 2px 6px;
+   background: var(--color-success);
+   color: white;
+   font-size: 8px;
+   font-weight: 700;
+   border-radius: 4px;
+ }
+ 
+ .pity-badge {
+   position: absolute;
+   top: -8px;
+   left: -8px;
+   padding: 2px 6px;
+   background: #fbbf24;
+   color: black;
+   font-size: 8px;
+   font-weight: 700;
+   border-radius: 4px;
+ }
+ 
+ .result-icon {
+   font-size: 24px;
+ }
+ 
+ .result-rarity {
+   font-size: 10px;
+   font-weight: 700;
+ }
+ 
+ .result-name {
+   font-size: 9px;
+   font-weight: 600;
+   line-height: 1.2;
+ }
+ 
+ .result-type {
+   font-size: 8px;
+   color: var(--text-muted);
+ }
+ 
+ /* レスポンシブ */
+ @media (max-width: 400px) {
+   .results-grid {
+     grid-template-columns: repeat(4, 1fr);
+   }
+ }

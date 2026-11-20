@@ -1,0 +1,314 @@
+.formation-page {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.page-title {
+  font-size: 24px;
+  font-weight: 700;
+  text-align: center;
+}
+
+/* タブ */
+.formation-tabs {
+  display: flex;
+  background: var(--bg-card);
+  border-radius: 8px;
+  padding: 4px;
+}
+
+.tab-btn {
+  flex: 1;
+  padding: 12px;
+  background: none;
+  color: var(--text-secondary);
+  font-weight: 600;
+  border-radius: 6px;
+  transition: var(--transition);
+}
+
+.tab-btn.active {
+  background: var(--color-primary);
+  color: white;
+}
+
+/* 編成スロット */
+.formation-slots {
+  background: linear-gradient(135deg, #1a1a2e, #252542);
+}
+
+.slots-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.formation-slot {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 20px;
+  background: var(--bg-dark);
+  border: 2px dashed rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  min-height: 120px;
+  cursor: pointer;
+  position: relative;
+  transition: var(--transition);
+}
+
+.formation-slot:hover {
+  border-color: var(--color-primary);
+}
+
+.formation-slot.selected {
+  border-color: var(--color-primary);
+  border-style: solid;
+  box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.2);
+}
+
+.formation-slot.filled {
+  border-style: solid;
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.slot-rarity {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.slot-rarity.rarity-ssr {
+  background: linear-gradient(135deg, #fbbf24, #f59e0b);
+  color: black;
+}
+
+.slot-rarity.rarity-sr {
+  background: linear-gradient(135deg, #a855f7, #7c3aed);
+  color: white;
+}
+
+.slot-rarity.rarity-r {
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+  color: white;
+}
+
+.slot-rarity.rarity-n {
+  background: #6b7280;
+  color: white;
+}
+
+.slot-icon {
+  font-size: 36px;
+}
+
+.slot-name {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.slot-level {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.slot-remove {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 24px;
+  height: 24px;
+  background: var(--color-danger);
+  color: white;
+  border-radius: 50%;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slot-empty-icon {
+  font-size: 32px;
+  color: var(--text-muted);
+}
+
+.slot-empty-text {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+/* キャラクター選択 */
+.character-selector {
+  animation: slideUp 0.3s ease;
+}
+
+.character-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.character-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 12px;
+  background: var(--bg-dark);
+  border-radius: 8px;
+  position: relative;
+  transition: var(--transition);
+}
+
+.character-card:hover {
+  transform: scale(1.05);
+}
+
+.character-card.in-formation {
+  opacity: 0.6;
+}
+
+.character-card.rarity-ssr {
+  border: 2px solid #fbbf24;
+}
+
+.character-card.rarity-sr {
+  border: 2px solid #a855f7;
+}
+
+.character-card.rarity-r {
+  border: 2px solid #3b82f6;
+}
+
+.char-rarity {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  font-size: 8px;
+  font-weight: 700;
+  padding: 2px 4px;
+  border-radius: 2px;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.char-icon {
+  font-size: 28px;
+}
+
+.char-name {
+  font-size: 11px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.char-level {
+  font-size: 10px;
+  color: var(--text-muted);
+}
+
+.in-formation-badge {
+  position: absolute;
+  bottom: 4px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 8px;
+  padding: 2px 6px;
+  background: var(--color-primary);
+  border-radius: 4px;
+  white-space: nowrap;
+}
+
+.no-characters {
+  text-align: center;
+  padding: 40px 20px;
+  color: var(--text-secondary);
+}
+
+/* 所持キャラクター一覧 */
+.character-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.character-list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  background: var(--bg-dark);
+  border-radius: 8px;
+  border-left: 4px solid transparent;
+}
+
+.character-list-item.rarity-ssr {
+  border-left-color: #fbbf24;
+}
+
+.character-list-item.rarity-sr {
+  border-left-color: #a855f7;
+}
+
+.character-list-item.rarity-r {
+  border-left-color: #3b82f6;
+}
+
+.character-list-item.rarity-n {
+  border-left-color: #6b7280;
+}
+
+.char-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.char-info .char-icon {
+  font-size: 24px;
+}
+
+.char-details {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.char-details .char-name {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.char-rarity-badge {
+  font-size: 10px;
+  color: var(--text-muted);
+}
+
+.char-stats {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+}
+
+.char-stats .char-level {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+.stat-row {
+  display: flex;
+  gap: 12px;
+  font-size: 11px;
+  color: var(--text-muted);
+}

@@ -1,0 +1,81 @@
+{
+  "banners": [
+    {
+      "id": "banner_standard",
+      "name": "常設ガチャ",
+      "description": "いつでも引ける標準ガチャ。全てのキャラクターと装備が排出されます。",
+      "type": "standard",
+      "items": [
+        { "type": "character", "id": "char_luna", "rate": 1.0 },
+        { "type": "character", "id": "char_nox", "rate": 1.0 },
+        { "type": "character", "id": "char_rem", "rate": 1.0 },
+        { "type": "character", "id": "char_nap", "rate": 4.0 },
+        { "type": "character", "id": "char_doze", "rate": 4.0 },
+        { "type": "character", "id": "char_slumber", "rate": 4.0 },
+        { "type": "character", "id": "char_drowsy", "rate": 15.0 },
+        { "type": "character", "id": "char_snooze", "rate": 15.0 },
+        { "type": "equipment", "id": "equip_dream_sword", "rate": 1.5 },
+        { "type": "equipment", "id": "equip_night_armor", "rate": 1.5 },
+        { "type": "equipment", "id": "equip_sleep_blade", "rate": 5.0 },
+        { "type": "equipment", "id": "equip_rest_shield", "rate": 5.0 },
+        { "type": "equipment", "id": "equip_basic_sword", "rate": 20.0 },
+        { "type": "equipment", "id": "equip_basic_armor", "rate": 21.0 }
+      ],
+      "cost": {
+        "single": 150,
+        "multi": 1350
+      },
+      "imageKey": "banner_standard"
+    },
+    {
+      "id": "banner_newbie",
+      "name": "初心者応援ガチャ",
+      "description": "新規プレイヤー限定！SR以上確定の特別ガチャ。（1回のみ）",
+      "type": "limited",
+      "items": [
+        { "type": "character", "id": "char_luna", "rate": 5.0 },
+        { "type": "character", "id": "char_nox", "rate": 5.0 },
+        { "type": "character", "id": "char_rem", "rate": 5.0 },
+        { "type": "character", "id": "char_nap", "rate": 15.0 },
+        { "type": "character", "id": "char_doze", "rate": 15.0 },
+        { "type": "character", "id": "char_slumber", "rate": 15.0 },
+        { "type": "character", "id": "char_drowsy", "rate": 20.0 },
+        { "type": "character", "id": "char_snooze", "rate": 20.0 }
+      ],
+      "cost": {
+        "single": 0,
+        "multi": 0
+      },
+      "imageKey": "banner_newbie"
+    },
+    {
+      "id": "banner_pickup_luna",
+      "name": "ルナピックアップ",
+      "description": "SSRヒーラー「ルナ」の出現率がアップ！",
+      "type": "pickup",
+      "items": [
+        { "type": "character", "id": "char_luna", "rate": 2.0 },
+        { "type": "character", "id": "char_nox", "rate": 0.5 },
+        { "type": "character", "id": "char_rem", "rate": 0.5 },
+        { "type": "character", "id": "char_nap", "rate": 4.0 },
+        { "type": "character", "id": "char_doze", "rate": 4.0 },
+        { "type": "character", "id": "char_slumber", "rate": 4.0 },
+        { "type": "character", "id": "char_drowsy", "rate": 15.0 },
+        { "type": "character", "id": "char_snooze", "rate": 15.0 },
+        { "type": "equipment", "id": "equip_dream_sword", "rate": 1.5 },
+        { "type": "equipment", "id": "equip_night_armor", "rate": 1.5 },
+        { "type": "equipment", "id": "equip_sleep_blade", "rate": 5.0 },
+        { "type": "equipment", "id": "equip_rest_shield", "rate": 5.0 },
+        { "type": "equipment", "id": "equip_basic_sword", "rate": 20.5 },
+        { "type": "equipment", "id": "equip_basic_armor", "rate": 21.5 }
+      ],
+      "cost": {
+        "single": 150,
+        "multi": 1350
+      },
+      "startDate": "2024-01-01",
+      "endDate": "2024-12-31",
+      "imageKey": "banner_pickup_luna"
+    }
+  ]
+}

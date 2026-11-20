@@ -1,0 +1,288 @@
+{
+  "stages": [
+    {
+      "id": "stage_1_1",
+      "chapterId": "chapter_1",
+      "stageNumber": 1,
+      "name": "羊の草原",
+      "description": "迷える羊たちが徘徊する平和な草原。睡眠の守護者として最初の試練。",
+      "enemies": [
+        { "enemyId": "enemy_sheep_1", "count": 2 }
+      ],
+      "rewards": {
+        "exp": 50,
+        "gold": 100,
+        "dreamStone": 10,
+        "materials": [],
+        "firstClearBonus": {
+          "dreamStone": 50,
+          "gachaTicket": 1
+        }
+      },
+      "staminaCost": 5,
+      "dialogue": {
+        "before": [
+          { "speaker": "ナビゲーター", "text": "ようこそ、夢の世界へ。あなたは今日から睡眠の守護者です。" },
+          { "speaker": "ナビゲーター", "text": "まずは迷える羊たちを導いて、基本的な戦い方を学びましょう。" }
+        ],
+        "after": [
+          { "speaker": "ナビゲーター", "text": "素晴らしい！これであなたも立派な守護者の第一歩を踏み出しました。" }
+        ]
+      },
+      "isBoss": false,
+      "isMiniBoss": false
+    },
+    {
+      "id": "stage_1_2",
+      "chapterId": "chapter_1",
+      "stageNumber": 2,
+      "name": "夜の森入口",
+      "description": "森の入口で出会う、少し手強い羊たち。",
+      "enemies": [
+        { "enemyId": "enemy_sheep_1", "count": 1 },
+        { "enemyId": "enemy_sheep_2", "count": 1 }
+      ],
+      "rewards": {
+        "exp": 80,
+        "gold": 150,
+        "dreamStone": 15,
+        "materials": []
+      },
+      "staminaCost": 5,
+      "dialogue": {
+        "before": [
+          { "speaker": "ナビゲーター", "text": "森の奥には悪夢の気配が...まずは入口で腕試しです。" }
+        ]
+      },
+      "unlockConditions": {
+        "previousStageId": "stage_1_1"
+      },
+      "isBoss": false,
+      "isMiniBoss": false
+    },
+    {
+      "id": "stage_1_3",
+      "chapterId": "chapter_1",
+      "stageNumber": 3,
+      "name": "暗い森の中",
+      "description": "森の中で悪夢の手先と遭遇する。",
+      "enemies": [
+        { "enemyId": "enemy_sheep_2", "count": 1 },
+        { "enemyId": "enemy_nightmare_imp", "count": 1 }
+      ],
+      "rewards": {
+        "exp": 120,
+        "gold": 200,
+        "dreamStone": 20,
+        "materials": []
+      },
+      "staminaCost": 6,
+      "dialogue": {
+        "before": [
+          { "speaker": "ナビゲーター", "text": "あれは...ナイトメアインプ！悪夢の勢力の手先です。" },
+          { "speaker": "ナビゲーター", "text": "油断せずに戦いましょう！" }
+        ]
+      },
+      "unlockConditions": {
+        "previousStageId": "stage_1_2"
+      },
+      "isBoss": false,
+      "isMiniBoss": false
+    },
+    {
+      "id": "stage_1_4",
+      "chapterId": "chapter_1",
+      "stageNumber": 4,
+      "name": "森の奥深く",
+      "description": "森の奥で待ち構える複数の敵。",
+      "enemies": [
+        { "enemyId": "enemy_nightmare_imp", "count": 2 },
+        { "enemyId": "enemy_shadow_wisp", "count": 1 }
+      ],
+      "rewards": {
+        "exp": 150,
+        "gold": 250,
+        "dreamStone": 25,
+        "materials": []
+      },
+      "staminaCost": 7,
+      "unlockConditions": {
+        "previousStageId": "stage_1_3"
+      },
+      "isBoss": false,
+      "isMiniBoss": true
+    },
+    {
+      "id": "stage_1_5",
+      "chapterId": "chapter_1",
+      "stageNumber": 5,
+      "name": "ナイトテラーの巣",
+      "description": "第1章のボス、ナイトテラーとの決戦。",
+      "enemies": [
+        { "enemyId": "boss_night_terror", "count": 1 }
+      ],
+      "rewards": {
+        "exp": 300,
+        "gold": 500,
+        "dreamStone": 100,
+        "materials": [],
+        "firstClearBonus": {
+          "dreamStone": 300,
+          "gachaTicket": 3,
+          "equipment": ["equip_starter_sword"]
+        }
+      },
+      "staminaCost": 10,
+      "dialogue": {
+        "before": [
+          { "speaker": "ナイトテラー", "text": "フハハハ...新しい守護者か。お前の睡眠を乱してやろう！" },
+          { "speaker": "ナビゲーター", "text": "これがナイトテラー...第1章のボスです。全力で戦いましょう！" }
+        ],
+        "after": [
+          { "speaker": "ナビゲーター", "text": "やりました！ナイトテラーを倒しました！" },
+          { "speaker": "ナビゲーター", "text": "しかし、悪夢の勢力はまだまだ存在します。次の章へ進みましょう。" }
+        ]
+      },
+      "unlockConditions": {
+        "previousStageId": "stage_1_4"
+      },
+      "isBoss": true,
+      "isMiniBoss": false
+    },
+    {
+      "id": "stage_2_1",
+      "chapterId": "chapter_2",
+      "stageNumber": 1,
+      "name": "悪夢の入口",
+      "description": "第2章の始まり。悪夢の領域への入口。",
+      "enemies": [
+        { "enemyId": "enemy_nightmare_imp", "count": 2 },
+        { "enemyId": "enemy_sleep_eater", "count": 1 }
+      ],
+      "rewards": {
+        "exp": 180,
+        "gold": 300,
+        "dreamStone": 30,
+        "materials": []
+      },
+      "staminaCost": 8,
+      "dialogue": {
+        "before": [
+          { "speaker": "ナビゲーター", "text": "ここからは悪夢の領域。敵も強くなっています。" }
+        ]
+      },
+      "unlockConditions": {
+        "previousStageId": "stage_1_5"
+      },
+      "isBoss": false,
+      "isMiniBoss": false
+    },
+    {
+      "id": "stage_2_2",
+      "chapterId": "chapter_2",
+      "stageNumber": 2,
+      "name": "彷徨う影",
+      "description": "影に潜む敵との戦い。",
+      "enemies": [
+        { "enemyId": "enemy_shadow_wisp", "count": 2 },
+        { "enemyId": "enemy_insomnia_ghost", "count": 1 }
+      ],
+      "rewards": {
+        "exp": 220,
+        "gold": 350,
+        "dreamStone": 35,
+        "materials": []
+      },
+      "staminaCost": 8,
+      "unlockConditions": {
+        "previousStageId": "stage_2_1"
+      },
+      "isBoss": false,
+      "isMiniBoss": false
+    },
+    {
+      "id": "stage_2_3",
+      "chapterId": "chapter_2",
+      "stageNumber": 3,
+      "name": "不眠の回廊",
+      "description": "眠れぬ者たちの霊が徘徊する回廊。",
+      "enemies": [
+        { "enemyId": "enemy_insomnia_ghost", "count": 2 },
+        { "enemyId": "enemy_sleep_eater", "count": 1 }
+      ],
+      "rewards": {
+        "exp": 260,
+        "gold": 400,
+        "dreamStone": 40,
+        "materials": []
+      },
+      "staminaCost": 9,
+      "unlockConditions": {
+        "previousStageId": "stage_2_2"
+      },
+      "isBoss": false,
+      "isMiniBoss": false
+    },
+    {
+      "id": "stage_2_4",
+      "chapterId": "chapter_2",
+      "stageNumber": 4,
+      "name": "悪夢の玉座前",
+      "description": "ボスの間への最後の関門。",
+      "enemies": [
+        { "enemyId": "enemy_insomnia_ghost", "count": 2 },
+        { "enemyId": "enemy_sleep_eater", "count": 2 }
+      ],
+      "rewards": {
+        "exp": 300,
+        "gold": 450,
+        "dreamStone": 50,
+        "materials": []
+      },
+      "staminaCost": 10,
+      "unlockConditions": {
+        "previousStageId": "stage_2_3"
+      },
+      "isBoss": false,
+      "isMiniBoss": true
+    },
+    {
+      "id": "stage_2_5",
+      "chapterId": "chapter_2",
+      "stageNumber": 5,
+      "name": "スリープデーモンの玉座",
+      "description": "第2章のボス、スリープデーモンとの決戦。",
+      "enemies": [
+        { "enemyId": "boss_sleep_demon", "count": 1 }
+      ],
+      "rewards": {
+        "exp": 500,
+        "gold": 800,
+        "dreamStone": 200,
+        "materials": [],
+        "firstClearBonus": {
+          "dreamStone": 500,
+          "gachaTicket": 5,
+          "equipment": ["equip_nightmare_blade"]
+        }
+      },
+      "staminaCost": 12,
+      "dialogue": {
+        "before": [
+          { "speaker": "スリープデーモン", "text": "愚かな守護者め...お前の安眠を永遠に奪ってやろう..." },
+          { "speaker": "ナビゲーター", "text": "これがスリープデーモン！第2章の最強の敵です！" },
+          { "speaker": "ナビゲーター", "text": "今まで培った力を全て出し切りましょう！" }
+        ],
+        "after": [
+          { "speaker": "ナビゲーター", "text": "信じられない...スリープデーモンを倒したのですね！" },
+          { "speaker": "ナビゲーター", "text": "あなたは真の睡眠の守護者です。しかし、旅はまだ続きます..." }
+        ]
+      },
+      "unlockConditions": {
+        "previousStageId": "stage_2_4"
+      },
+      "isBoss": true,
+      "isMiniBoss": false
+    }
+  ]
+}

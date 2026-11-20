@@ -1,0 +1,22 @@
+{
+  "chapters": [
+    {
+      "id": "chapter_1",
+      "number": 1,
+      "name": "眠りの始まり",
+      "description": "睡眠の世界への扉が開かれる。夢の守護者として、最初の一歩を踏み出そう。",
+      "stageIds": ["stage_1_1", "stage_1_2", "stage_1_3", "stage_1_4", "stage_1_5"],
+      "backgroundKey": "bg_chapter1",
+      "bgmKey": "story"
+    },
+    {
+      "id": "chapter_2",
+      "number": 2,
+      "name": "悪夢の影",
+      "description": "悪夢の勢力が姿を現し始める。睡眠の平和を守るため、戦いは激しさを増す。",
+      "stageIds": ["stage_2_1", "stage_2_2", "stage_2_3", "stage_2_4", "stage_2_5"],
+      "backgroundKey": "bg_chapter2",
+      "bgmKey": "story"
+    }
+  ]
+}

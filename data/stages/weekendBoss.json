@@ -1,0 +1,48 @@
+{
+  "weekendBosses": [
+    {
+      "id": "weekend_dragon",
+      "name": "ドリームドラゴン",
+      "description": "週末限定で出現する巨大な夢の竜。チームで協力して討伐せよ！",
+      "hp": 50000,
+      "attack": 200,
+      "defense": 100,
+      "speed": 60,
+      "imageKey": "boss_dragon",
+      "rewards": {
+        "exp": 2000,
+        "gold": 5000,
+        "dreamStone": 500,
+        "materials": [
+          { "itemId": "mat_dragon_scale", "count": 3, "dropRate": 100 },
+          { "itemId": "mat_dragon_claw", "count": 1, "dropRate": 50 }
+        ]
+      },
+      "availableDay": "saturday",
+      "minPlayers": 1,
+      "maxPlayers": 4
+    },
+    {
+      "id": "weekend_nightmare_king",
+      "name": "ナイトメアキング",
+      "description": "悪夢を統べる王。日曜日限定の超強敵！",
+      "hp": 80000,
+      "attack": 250,
+      "defense": 120,
+      "speed": 50,
+      "imageKey": "boss_nightmare_king",
+      "rewards": {
+        "exp": 3000,
+        "gold": 8000,
+        "dreamStone": 800,
+        "materials": [
+          { "itemId": "mat_nightmare_essence", "count": 5, "dropRate": 100 },
+          { "itemId": "mat_crown_fragment", "count": 1, "dropRate": 30 }
+        ]
+      },
+      "availableDay": "sunday",
+      "minPlayers": 2,
+      "maxPlayers": 4
+    }
+  ]
+}

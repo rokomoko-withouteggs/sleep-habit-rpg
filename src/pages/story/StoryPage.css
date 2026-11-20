@@ -1,0 +1,190 @@
+.story-page {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.page-title {
+  font-size: 24px;
+  font-weight: 700;
+  text-align: center;
+}
+
+/* チャプターセレクター */
+.chapter-selector {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding-bottom: 8px;
+}
+
+.chapter-tab {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 12px 20px;
+  background: var(--bg-card);
+  border-radius: 8px;
+  white-space: nowrap;
+  transition: var(--transition);
+}
+
+.chapter-tab:hover {
+  background: var(--bg-card-hover);
+}
+
+.chapter-tab.active {
+  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+}
+
+.chapter-number {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.chapter-progress {
+  font-size: 12px;
+  opacity: 0.7;
+}
+
+/* チャプター情報 */
+.chapter-info {
+  background: linear-gradient(135deg, #1a1a2e, #252542);
+}
+
+.chapter-title {
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+.chapter-description {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* ステージリスト */
+.stage-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.stage-card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 16px;
+  background: var(--bg-card);
+  border-radius: 12px;
+  text-align: left;
+  position: relative;
+  overflow: hidden;
+  transition: var(--transition);
+}
+
+.stage-card:hover:not(:disabled) {
+  background: var(--bg-card-hover);
+  transform: translateX(4px);
+}
+
+.stage-card.completed {
+  border-left: 4px solid var(--color-success);
+}
+
+.stage-card.boss {
+  background: linear-gradient(135deg, rgba(239, 68, 68, 0.1), rgba(220, 38, 38, 0.05));
+  border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
+.stage-card.mini-boss {
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.1), rgba(217, 119, 6, 0.05));
+  border: 1px solid rgba(245, 158, 11, 0.3);
+}
+
+.stage-card.locked {
+  opacity: 0.6;
+}
+
+.stage-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.stage-number {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-dark);
+  border-radius: 50%;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.stage-name {
+  flex: 1;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.stage-clear {
+  color: var(--color-success);
+  font-size: 20px;
+}
+
+.stage-description {
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.4;
+  }
+  
+  .stage-info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    color: var(--text-muted);
+  }
+  
+  .stage-stamina {
+    color: var(--color-warning);
+  }
+  
+  .stage-rewards {
+    color: var(--color-primary);
+  }
+  
+  .stage-lock-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+  
+  .lock-icon {
+    font-size: 32px;
+  }
+  
+  .lock-text {
+    font-size: 12px;
+    color: var(--text-secondary);
+  }
+  
+  .first-clear-badge {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    padding: 4px 8px;
+    background: linear-gradient(135deg, #fbbf24, #f59e0b);
+    color: black;
+    font-size: 10px;
+    font-weight: 700;
+    border-radius: 4px;
+  }

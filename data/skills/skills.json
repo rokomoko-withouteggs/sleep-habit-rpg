@@ -1,0 +1,258 @@
+{
+  "skills": [
+    {
+      "id": "skill_luna_heal",
+      "name": "ムーンライトヒール",
+      "description": "月の光で味方単体のHPを回復する",
+      "type": "active",
+      "targetType": "ally",
+      "effects": [
+        { "type": "heal", "value": 1.5 }
+      ],
+      "cooldown": 3
+    },
+    {
+      "id": "ult_luna_dream",
+      "name": "ドリームサンクチュアリ",
+      "description": "夢の聖域を展開し、味方全体のHPを大回復",
+      "type": "ultimate",
+      "targetType": "allAllies",
+      "effects": [
+        { "type": "heal", "value": 2.0 }
+      ],
+      "ultimateCost": 5
+    },
+    {
+      "id": "passive_luna_regen",
+      "name": "夢の恩恵",
+      "description": "毎ターン開始時、味方全体のHPを少量回復",
+      "type": "passive",
+      "targetType": "allAllies",
+      "effects": [
+        { "type": "heal", "value": 0.1 }
+      ]
+    },
+    {
+      "id": "skill_nox_shield",
+      "name": "ナイトシールド",
+      "description": "味方単体の防御力を上昇させる",
+      "type": "active",
+      "targetType": "ally",
+      "effects": [
+        { "type": "buff", "value": 30, "buffStat": "defense", "duration": 3 }
+      ],
+      "cooldown": 4
+    },
+    {
+      "id": "ult_nox_fortress",
+      "name": "フォートレスオブナイト",
+      "description": "絶対防御を展開し、味方全体のダメージを大幅軽減",
+      "type": "ultimate",
+      "targetType": "allAllies",
+      "effects": [
+        { "type": "buff", "value": 50, "buffStat": "defense", "duration": 2 }
+      ],
+      "ultimateCost": 5
+    },
+    {
+      "id": "passive_nox_guard",
+      "name": "守護者の誓い",
+      "description": "HPが50%以下の味方がいると、自身の防御力が上昇",
+      "type": "passive",
+      "targetType": "self",
+      "effects": [
+        { "type": "buff", "value": 20, "buffStat": "defense", "duration": 1 }
+      ]
+    },
+    {
+      "id": "skill_rem_strike",
+      "name": "レムストライク",
+      "description": "高速の一撃で敵単体に大ダメージ",
+      "type": "active",
+      "targetType": "single",
+      "effects": [
+        { "type": "damage", "value": 1.8 }
+      ],
+      "cooldown": 3
+    },
+    {
+      "id": "ult_rem_nightmare",
+      "name": "ナイトメアブレイク",
+      "description": "悪夢の力を解放し、敵全体に壊滅的ダメージ",
+      "type": "ultimate",
+      "targetType": "all",
+      "effects": [
+        { "type": "damage", "value": 2.5 }
+      ],
+      "ultimateCost": 5
+    },
+    {
+      "id": "passive_rem_crit",
+      "name": "REM覚醒",
+      "description": "クリティカル発生時、追加ダメージを与える",
+      "type": "passive",
+      "targetType": "self",
+      "effects": [
+        { "type": "buff", "value": 15, "buffStat": "critRate", "duration": 1 }
+      ]
+    },
+    {
+      "id": "skill_nap_buff",
+      "name": "パワーナップ",
+      "description": "味方単体の攻撃力を上昇させる",
+      "type": "active",
+      "targetType": "ally",
+      "effects": [
+        { "type": "buff", "value": 25, "buffStat": "attack", "duration": 3 }
+      ],
+      "cooldown": 3
+    },
+    {
+      "id": "ult_nap_support",
+      "name": "フルサポートナップ",
+      "description": "味方全体の全ステータスを上昇",
+      "type": "ultimate",
+      "targetType": "allAllies",
+      "effects": [
+        { "type": "buff", "value": 20, "buffStat": "attack", "duration": 3 },
+        { "type": "buff", "value": 20, "buffStat": "defense", "duration": 3 },
+        { "type": "buff", "value": 20, "buffStat": "speed", "duration": 3 }
+      ],
+      "ultimateCost": 5
+    },
+    {
+      "id": "passive_nap_team",
+      "name": "チームスピリット",
+      "description": "味方の数が多いほど、全員の攻撃力が上昇",
+      "type": "passive",
+      "targetType": "allAllies",
+      "effects": [
+        { "type": "buff", "value": 5, "buffStat": "attack", "duration": 1 }
+      ]
+    },
+    {
+      "id": "skill_doze_taunt",
+      "name": "挑発の欠伸",
+      "description": "敵全体の攻撃を自分に集中させる",
+      "type": "active",
+      "targetType": "self",
+      "effects": [
+        { "type": "buff", "value": 30, "buffStat": "defense", "duration": 2 }
+      ],
+      "cooldown": 4
+    },
+    {
+      "id": "ult_doze_wall",
+      "name": "眠りの壁",
+      "description": "絶対防御状態になり、味方へのダメージを全て肩代わり",
+      "type": "ultimate",
+      "targetType": "self",
+      "effects": [
+        { "type": "buff", "value": 100, "buffStat": "defense", "duration": 2 }
+      ],
+      "ultimateCost": 5
+    },
+    {
+      "id": "passive_doze_endure",
+      "name": "不屈の眠り",
+      "description": "致死ダメージを受けた時、一度だけHP1で耐える",
+      "type": "passive",
+      "targetType": "self",
+      "effects": []
+    },
+    {
+      "id": "skill_slumber_slash",
+      "name": "スランバースラッシュ",
+      "description": "素早い2連撃で敵単体を攻撃",
+      "type": "active",
+      "targetType": "single",
+      "effects": [
+        { "type": "damage", "value": 0.8 },
+        { "type": "damage", "value": 0.8 }
+      ],
+      "cooldown": 2
+    },
+    {
+      "id": "ult_slumber_burst",
+      "name": "ディープスランバーバースト",
+      "description": "全力の一撃で敵単体に超ダメージ",
+      "type": "ultimate",
+      "targetType": "single",
+      "effects": [
+        { "type": "damage", "value": 4.0 }
+      ],
+      "ultimateCost": 5
+    },
+    {
+      "id": "passive_slumber_speed",
+      "name": "深眠の加速",
+      "description": "バトル開始時、速度が上昇",
+      "type": "passive",
+      "targetType": "self",
+      "effects": [
+        { "type": "buff", "value": 15, "buffStat": "speed", "duration": 99 }
+      ]
+    },
+    {
+      "id": "skill_drowsy_heal",
+      "name": "まどろみの癒し",
+      "description": "味方単体のHPを回復",
+      "type": "active",
+      "targetType": "ally",
+      "effects": [
+        { "type": "heal", "value": 1.2 }
+      ],
+      "cooldown": 3
+    },
+    {
+      "id": "ult_drowsy_revive",
+      "name": "目覚めの光",
+      "description": "戦闘不能の味方を蘇生する",
+      "type": "ultimate",
+      "targetType": "ally",
+      "effects": [
+        { "type": "heal", "value": 1.0 }
+      ],
+      "ultimateCost": 5
+    },
+    {
+      "id": "passive_drowsy_mana",
+      "name": "眠気の集中",
+      "description": "スキル使用時、一定確率でクールダウンが短縮",
+      "type": "passive",
+      "targetType": "self",
+      "effects": []
+    },
+    {
+      "id": "skill_snooze_slow",
+      "name": "二度寝の誘惑",
+      "description": "敵単体の速度を低下させる",
+      "type": "active",
+      "targetType": "single",
+      "effects": [
+        { "type": "debuff", "value": 30, "buffStat": "speed", "duration": 2 }
+      ],
+      "cooldown": 3
+    },
+    {
+      "id": "ult_snooze_debuff",
+      "name": "永遠の寝坊",
+      "description": "敵全体のステータスを大幅に低下",
+      "type": "ultimate",
+      "targetType": "all",
+      "effects": [
+        { "type": "debuff", "value": 25, "buffStat": "attack", "duration": 3 },
+        { "type": "debuff", "value": 25, "buffStat": "defense", "duration": 3 }
+      ],
+      "ultimateCost": 5
+    },
+    {
+      "id": "passive_snooze_delay",
+      "name": "遅延戦術",
+      "description": "敵を攻撃した時、一定確率で次の行動を遅らせる",
+      "type": "passive",
+      "targetType": "single",
+      "effects": []
+    }
+  ]
+}

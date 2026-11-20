@@ -1,0 +1,389 @@
+.sleep-page {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.page-title {
+  font-size: 24px;
+  font-weight: 700;
+  text-align: center;
+}
+
+/* タブ */
+.tab-buttons {
+  display: flex;
+  background: var(--bg-card);
+  border-radius: 8px;
+  padding: 4px;
+}
+
+.tab-btn {
+  flex: 1;
+  padding: 12px;
+  background: none;
+  color: var(--text-secondary);
+  font-weight: 600;
+  border-radius: 6px;
+  transition: var(--transition);
+}
+
+.tab-btn.active {
+  background: var(--color-primary);
+  color: white;
+}
+
+/* 入力フォーム */
+.sleep-form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.duration-input {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.duration-input input[type="range"] {
+  flex: 1;
+  height: 8px;
+  -webkit-appearance: none;
+  background: var(--bg-dark);
+  border-radius: 4px;
+  padding: 0;
+}
+
+.duration-input input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 24px;
+  height: 24px;
+  background: var(--color-primary);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.duration-value {
+  font-size: 24px;
+  font-weight: 700;
+  min-width: 80px;
+  text-align: right;
+  color: var(--color-primary);
+}
+
+.duration-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-top: 4px;
+}
+
+.quality-stars {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.star-btn {
+  font-size: 32px;
+  background: none;
+  color: var(--text-muted);
+  transition: var(--transition);
+  padding: 4px;
+}
+
+.star-btn.active {
+  color: #fbbf24;
+  text-shadow: 0 0 10px rgba(251, 191, 36, 0.5);
+}
+
+.star-btn:hover {
+  transform: scale(1.2);
+}
+
+.quality-label {
+  text-align: center;
+  margin-top: 8px;
+  color: var(--text-secondary);
+  font-size: 14px;
+}
+
+/* 記録済み */
+.already-recorded {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.recorded-icon {
+  font-size: 48px;
+  margin-bottom: 16px;
+}
+
+.already-recorded h3 {
+  margin-bottom: 8px;
+}
+
+.already-recorded p {
+  color: var(--text-secondary);
+  margin-bottom: 20px;
+}
+
+/* 睡眠のコツ */
+.sleep-tips {
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(139, 92, 246, 0.1));
+  border: 1px solid rgba(99, 102, 241, 0.3);
+}
+
+.tips-title {
+  font-size: 16px;
+  margin-bottom: 12px;
+ }
+ 
+ .tips-list {
+   list-style: none;
+   display: flex;
+   flex-direction: column;
+   gap: 8px;
+ }
+ 
+ .tips-list li {
+   font-size: 14px;
+   color: var(--text-secondary);
+   padding-left: 20px;
+   position: relative;
+ }
+ 
+ .tips-list li::before {
+   content: '•';
+   position: absolute;
+   left: 0;
+   color: var(--color-primary);
+ }
+ 
+ /* 履歴 */
+ .week-summary {
+   background: linear-gradient(135deg, #1a1a2e, #252542);
+ }
+ 
+ .week-summary h3 {
+   margin-bottom: 16px;
+   font-size: 16px;
+ }
+ 
+ .summary-stats {
+   display: flex;
+   justify-content: space-around;
+ }
+ 
+ .stat {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 4px;
+ }
+ 
+ .stat-value {
+   font-size: 24px;
+   font-weight: 700;
+   color: var(--color-primary);
+ }
+ 
+ .stat-label {
+   font-size: 12px;
+   color: var(--text-muted);
+ }
+ 
+ .history-list {
+   display: flex;
+   flex-direction: column;
+   gap: 12px;
+ }
+ 
+ .history-item {
+   padding: 16px;
+ }
+ 
+ .history-header {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   margin-bottom: 12px;
+ }
+ 
+ .history-date {
+   font-weight: 600;
+ }
+ 
+ .history-rank {
+   font-size: 24px;
+   font-weight: 800;
+ }
+ 
+ .history-details {
+   display: flex;
+   gap: 16px;
+   margin-bottom: 12px;
+ }
+ 
+ .detail {
+   display: flex;
+   align-items: center;
+   gap: 4px;
+   font-size: 14px;
+   color: var(--text-secondary);
+ }
+ 
+ .detail-icon {
+   font-size: 16px;
+ }
+ 
+ .history-score {
+   display: flex;
+   align-items: baseline;
+   gap: 8px;
+   margin-bottom: 8px;
+ }
+ 
+ .score-total {
+   font-size: 20px;
+   font-weight: 700;
+   color: var(--color-primary);
+ }
+ 
+ .score-breakdown {
+   font-size: 12px;
+   color: var(--text-muted);
+ }
+ 
+ .history-rewards {
+   display: flex;
+   gap: 12px;
+   font-size: 12px;
+   color: var(--text-secondary);
+ }
+ 
+ .no-history {
+   text-align: center;
+   padding: 40px 20px;
+ }
+ 
+ .no-history p {
+   margin-bottom: 16px;
+   color: var(--text-secondary);
+ }
+ 
+ /* 結果モーダル */
+ .result-modal {
+   text-align: center;
+   max-width: 360px;
+ }
+ 
+ .result-modal h2 {
+   margin-bottom: 24px;
+ }
+ 
+ .result-rank {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   margin-bottom: 16px;
+ }
+ 
+ .rank-letter {
+   font-size: 72px;
+   font-weight: 800;
+   line-height: 1;
+ }
+ 
+ .rank-label {
+   font-size: 14px;
+   color: var(--text-secondary);
+ }
+ 
+ .result-score {
+   display: flex;
+   align-items: baseline;
+   justify-content: center;
+   gap: 4px;
+   margin-bottom: 24px;
+ }
+ 
+ .score-number {
+   font-size: 48px;
+   font-weight: 700;
+ }
+ 
+ .score-unit {
+   font-size: 20px;
+   color: var(--text-secondary);
+ }
+ 
+ .score-details {
+   background: var(--bg-dark);
+   border-radius: 8px;
+   padding: 16px;
+   margin-bottom: 24px;
+ }
+ 
+ .score-row {
+   display: flex;
+   justify-content: space-between;
+   padding: 8px 0;
+   font-size: 14px;
+ }
+ 
+ .score-row:not(:last-child) {
+   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+ }
+ 
+ .result-rewards {
+   margin-bottom: 16px;
+ }
+ 
+ .result-rewards h3 {
+   font-size: 14px;
+   color: var(--text-secondary);
+   margin-bottom: 12px;
+ }
+ 
+ .rewards-grid {
+   display: flex;
+   justify-content: center;
+   gap: 24px;
+ }
+ 
+ .reward-item {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 4px;
+ }
+ 
+ .reward-icon {
+   font-size: 24px;
+ }
+ 
+ .reward-value {
+   font-size: 16px;
+   font-weight: 600;
+   color: var(--color-success);
+ }
+ 
+ .battle-buff-info {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: 8px;
+   padding: 12px;
+   background: rgba(99, 102, 241, 0.1);
+   border-radius: 8px;
+   margin-bottom: 24px;
+   font-size: 14px;
+   color: var(--color-primary);
+ }
+ 
+ .buff-icon {
+   font-size: 20px;
+ }

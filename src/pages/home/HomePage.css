@@ -1,0 +1,294 @@
+.home-page {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* ウェルカムセクション */
+.welcome-section {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.welcome-title {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.welcome-subtitle {
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+/* 睡眠ステータス */
+.sleep-status {
+  background: linear-gradient(135deg, #1a1a2e, #252542);
+}
+
+.sleep-summary {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.sleep-rank-display {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.rank-badge {
+  font-size: 36px;
+  font-weight: 800;
+  padding: 8px 20px;
+  border-radius: 12px;
+  background: var(--bg-dark);
+}
+
+.rank-badge.rank-s {
+  color: #fbbf24;
+  background: linear-gradient(135deg, rgba(251, 191, 36, 0.2), rgba(245, 158, 11, 0.1));
+  box-shadow: 0 0 20px rgba(251, 191, 36, 0.3);
+}
+
+.rank-badge.rank-a {
+  color: #a855f7;
+  background: linear-gradient(135deg, rgba(168, 85, 247, 0.2), rgba(124, 58, 237, 0.1));
+}
+
+.rank-badge.rank-b {
+  color: #3b82f6;
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.2), rgba(37, 99, 235, 0.1));
+}
+
+.rank-badge.rank-c {
+  color: #10b981;
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.2), rgba(5, 150, 105, 0.1));
+}
+
+.rank-badge.rank-d {
+  color: #6b7280;
+  background: linear-gradient(135deg, rgba(107, 114, 128, 0.2), rgba(75, 85, 99, 0.1));
+}
+
+.rank-score {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.sleep-buffs {
+  display: flex;
+  gap: 16px;
+}
+
+.buff-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.buff-label {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.buff-value {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+.no-sleep-record {
+  text-align: center;
+  padding: 20px;
+}
+
+.no-sleep-record p {
+  margin-bottom: 16px;
+  color: var(--text-secondary);
+}
+
+/* プレイヤーステータス */
+.status-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.status-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 12px;
+  background: var(--bg-dark);
+  border-radius: 8px;
+}
+
+.status-label {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.status-value {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.status-value.gold {
+  color: #fbbf24;
+}
+
+.exp-bar-container {
+  margin-top: 8px;
+}
+
+.exp-label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-bottom: 4px;
+}
+
+/* クイックアクション */
+.section-title {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.action-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.action-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 20px;
+  background: var(--bg-card);
+  border-radius: 12px;
+  position: relative;
+  transition: var(--transition);
+}
+
+.action-card:hover {
+  background: var(--bg-card-hover);
+  transform: translateY(-2px);
+}
+
+.action-card.highlight {
+  border: 2px solid var(--color-accent);
+  animation: pulse 2s infinite;
+}
+
+.action-icon {
+  font-size: 32px;
+}
+
+.action-label {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.action-badge {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 20px;
+  height: 20px;
+  background: var(--color-danger);
+  color: white;
+  border-radius: 50%;
+  font-size: 12px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* イベント通知 */
+.events-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.event-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 12px;
+  background: var(--bg-dark);
+  border-radius: 8px;
+  border-left: 3px solid var(--color-primary);
+}
+
+.event-item.event-reward {
+  border-left-color: var(--color-success);
+}
+
+.event-item.event-warning {
+  border-left-color: var(--color-warning);
+}
+
+.event-title {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.event-message {
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+/* 週末ボスバナー */
+.weekend-boss-banner {
+  background: linear-gradient(135deg, #7c3aed, #4f46e5);
+  border-radius: 12px;
+  padding: 16px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.weekend-boss-banner:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(124, 58, 237, 0.3);
+}
+
+.banner-content {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.banner-icon {
+  font-size: 40px;
+}
+
+.banner-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.banner-title {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.banner-subtitle {
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+.banner-arrow {
+  font-size: 24px;
+}

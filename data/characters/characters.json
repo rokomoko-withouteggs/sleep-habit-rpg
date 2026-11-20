@@ -1,0 +1,148 @@
+{
+  "characters": [
+    {
+      "id": "char_luna",
+      "name": "ルナ",
+      "rarity": "SSR",
+      "job": "DreamHealer",
+      "baseStats": {
+        "hp": 850,
+        "attack": 180,
+        "defense": 120,
+        "speed": 95,
+        "critRate": 10
+      },
+      "skillId": "skill_luna_heal",
+      "ultimateId": "ult_luna_dream",
+      "passiveId": "passive_luna_regen",
+      "imageKey": "char_luna",
+      "description": "夢の世界を癒す神秘的なヒーラー。味方の回復と浄化を得意とする。"
+    },
+    {
+      "id": "char_nox",
+      "name": "ノクス",
+      "rarity": "SSR",
+      "job": "NightGuard",
+      "baseStats": {
+        "hp": 1200,
+        "attack": 150,
+        "defense": 200,
+        "speed": 70,
+        "critRate": 5
+      },
+      "skillId": "skill_nox_shield",
+      "ultimateId": "ult_nox_fortress",
+      "passiveId": "passive_nox_guard",
+      "imageKey": "char_nox",
+      "description": "夜を守る不屈の守護者。高い防御力で味方を守る。"
+    },
+    {
+      "id": "char_rem",
+      "name": "レム",
+      "rarity": "SSR",
+      "job": "RemAttacker",
+      "baseStats": {
+        "hp": 750,
+        "attack": 250,
+        "defense": 80,
+        "speed": 110,
+        "critRate": 25
+      },
+      "skillId": "skill_rem_strike",
+      "ultimateId": "ult_rem_nightmare",
+      "passiveId": "passive_rem_crit",
+      "imageKey": "char_rem",
+      "description": "REM睡眠の力を操る高速アタッカー。クリティカル攻撃が得意。"
+    },
+    {
+      "id": "char_nap",
+      "name": "ナップ",
+      "rarity": "SR",
+      "job": "NapSupporter",
+      "baseStats": {
+        "hp": 900,
+        "attack": 160,
+        "defense": 140,
+        "speed": 85,
+        "critRate": 8
+      },
+      "skillId": "skill_nap_buff",
+      "ultimateId": "ult_nap_support",
+      "passiveId": "passive_nap_team",
+      "imageKey": "char_nap",
+      "description": "仮眠の妖精。味方へのバフとサポートを得意とする。"
+    },
+    {
+      "id": "char_doze",
+      "name": "ドーズ",
+      "rarity": "SR",
+      "job": "NightGuard",
+      "baseStats": {
+        "hp": 1000,
+        "attack": 130,
+        "defense": 170,
+        "speed": 65,
+        "critRate": 5
+      },
+      "skillId": "skill_doze_taunt",
+      "ultimateId": "ult_doze_wall",
+      "passiveId": "passive_doze_endure",
+      "imageKey": "char_doze",
+      "description": "うたた寝の守り手。敵の攻撃を引き付けて味方を守る。"
+    },
+    {
+      "id": "char_slumber",
+      "name": "スランバー",
+      "rarity": "SR",
+      "job": "RemAttacker",
+      "baseStats": {
+        "hp": 700,
+        "attack": 220,
+        "defense": 90,
+        "speed": 100,
+        "critRate": 20
+      },
+      "skillId": "skill_slumber_slash",
+      "ultimateId": "ult_slumber_burst",
+      "passiveId": "passive_slumber_speed",
+      "imageKey": "char_slumber",
+      "description": "深い眠りの剣士。素早い連続攻撃で敵を圧倒する。"
+    },
+    {
+      "id": "char_drowsy",
+      "name": "ドロウジー",
+      "rarity": "R",
+      "job": "DreamHealer",
+      "baseStats": {
+        "hp": 750,
+        "attack": 150,
+        "defense": 100,
+        "speed": 80,
+        "critRate": 8
+      },
+      "skillId": "skill_drowsy_heal",
+      "ultimateId": "ult_drowsy_revive",
+      "passiveId": "passive_drowsy_mana",
+      "imageKey": "char_drowsy",
+      "description": "眠気の癒し手。基本的な回復魔法を使う初心者向けヒーラー。"
+    },
+    {
+      "id": "char_snooze",
+      "name": "スヌーズ",
+      "rarity": "R",
+      "job": "NapSupporter",
+      "baseStats": {
+        "hp": 800,
+        "attack": 140,
+        "defense": 120,
+        "speed": 90,
+        "critRate": 10
+      },
+      "skillId": "skill_snooze_slow",
+      "ultimateId": "ult_snooze_debuff",
+      "passiveId": "passive_snooze_delay",
+      "imageKey": "char_snooze",
+      "description": "二度寝の使い手。敵の行動を遅らせるデバッファー。"
+    }
+  ]
+}

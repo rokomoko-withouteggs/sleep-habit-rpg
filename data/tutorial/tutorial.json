@@ -1,0 +1,103 @@
+{
+  "tutorials": [
+    {
+      "id": "tutorial_initial",
+      "name": "初回チュートリアル",
+      "steps": [
+        {
+          "id": "step_welcome",
+          "message": "睡眠習慣RPG「Dream Guardian」へようこそ！",
+          "action": "next"
+        },
+        {
+          "id": "step_intro",
+          "message": "このゲームでは、あなたの睡眠習慣がゲームの進行に影響します。",
+          "action": "next"
+        },
+        {
+          "id": "step_sleep_input",
+          "message": "まずは昨日の睡眠を記録しましょう。画面下の「睡眠」ボタンをタップしてください。",
+          "targetElement": "#nav-sleep",
+          "action": "click",
+          "nextStepId": "step_sleep_form"
+        },
+        {
+          "id": "step_sleep_form",
+          "message": "睡眠時間、就寝時刻、睡眠の質を入力してください。",
+          "targetElement": "#sleep-form",
+          "action": "input",
+          "nextStepId": "step_sleep_complete"
+        },
+        {
+          "id": "step_sleep_complete",
+          "message": "素晴らしい！睡眠スコアに応じて報酬がもらえます。良い睡眠を心がけましょう！",
+          "action": "next"
+        },
+        {
+          "id": "step_story_intro",
+          "message": "次はストーリーを進めましょう。「ストーリー」ボタンをタップしてください。",
+          "targetElement": "#nav-story",
+          "action": "click",
+          "nextStepId": "step_story_select"
+        },
+        {
+          "id": "step_story_select",
+          "message": "第1章「眠りの始まり」をプレイしましょう。ステージを選択してください。",
+          "targetElement": "#stage-1-1",
+          "action": "click",
+          "nextStepId": "step_battle_intro"
+        },
+        {
+          "id": "step_battle_intro",
+          "message": "バトルでは、通常攻撃・スキル・必殺技・防御の4つの行動から選べます。",
+          "action": "next"
+        },
+        {
+          "id": "step_battle_attack",
+          "message": "まずは「攻撃」を選んで敵を攻撃してみましょう。",
+          "targetElement": "#btn-attack",
+          "action": "click",
+          "nextStepId": "step_battle_target"
+        },
+        {
+          "id": "step_battle_target",
+          "message": "攻撃する敵をタップして選択してください。",
+          "targetElement": ".enemy-unit",
+          "action": "click",
+          "nextStepId": "step_battle_continue"
+        },
+        {
+          "id": "step_battle_continue",
+          "message": "良い調子です！このまま敵を全滅させましょう。セミオートも使えます。",
+          "action": "next"
+        },
+        {
+          "id": "step_gacha_intro",
+          "message": "バトルに勝利しました！獲得したドリームストーンでガチャを引いてみましょう。",
+          "targetElement": "#nav-gacha",
+          "action": "click",
+          "nextStepId": "step_gacha_pull"
+        },
+        {
+          "id": "step_gacha_pull",
+          "message": "「初心者応援ガチャ」は無料で1回引けます。タップして引いてみましょう！",
+          "targetElement": "#banner-newbie",
+          "action": "click",
+          "nextStepId": "step_formation_intro"
+        },
+        {
+          "id": "step_formation_intro",
+          "message": "新しいキャラクターを手に入れたら、編成に組み込みましょう。",
+          "targetElement": "#nav-formation",
+          "action": "click",
+          "nextStepId": "step_tutorial_complete"
+        },
+        {
+          "id": "step_tutorial_complete",
+          "message": "チュートリアル完了！これからも良い睡眠を取りながら、夢の世界を守っていきましょう！",
+          "action": "next"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "equipment": [
+    {
+      "id": "equip_starter_sword",
+      "name": "初心者の剣",
+      "type": "weapon",
+      "rarity": "R",
+      "effects": [
+        { "stat": "attack", "value": 20, "isMultiplier": false }
+      ],
+      "imageKey": "equip_starter_sword",
+      "description": "睡眠の守護者に与えられる最初の剣。"
+    },
+    {
+      "id": "equip_basic_sword",
+      "name": "夢見の剣",
+      "type": "weapon",
+      "rarity": "N",
+      "effects": [
+        { "stat": "attack", "value": 10, "isMultiplier": false }
+      ],
+      "imageKey": "equip_basic_sword",
+      "description": "基本的な剣。攻撃力を少し上げる。"
+    },
+    {
+      "id": "equip_basic_armor",
+      "name": "眠りの衣",
+      "type": "armor",
+      "rarity": "N",
+      "effects": [
+        { "stat": "defense", "value": 10, "isMultiplier": false }
+      ],
+      "imageKey": "equip_basic_armor",
+      "description": "基本的な防具。防御力を少し上げる。"
+    },
+    {
+      "id": "equip_sleep_blade",
+      "name": "スリープブレイド",
+      "type": "weapon",
+      "rarity": "R",
+      "effects": [
+        { "stat": "attack", "value": 30, "isMultiplier": false },
+        { "stat": "speed", "value": 5, "isMultiplier": false }
+      ],
+      "imageKey": "equip_sleep_blade",
+      "description": "睡眠の力を宿した刃。攻撃力と速度が上がる。"
+    },
+    {
+      "id": "equip_rest_shield",
+      "name": "レストシールド",
+      "type": "armor",
+      "rarity": "R",
+      "effects": [
+        { "stat": "defense", "value": 25, "isMultiplier": false },
+        { "stat": "hp", "value": 50, "isMultiplier": false }
+      ],
+      "imageKey": "equip_rest_shield",
+      "description": "休息の力を宿した盾。防御力とHPが上がる。"
+    },
+    {
+      "id": "equip_dream_sword",
+      "name": "ドリームソード",
+      "type": "weapon",
+      "rarity": "SSR",
+      "effects": [
+        { "stat": "attack", "value": 80, "isMultiplier": false },
+        { "stat": "critRate", "value": 10, "isMultiplier": false },
+        { "stat": "ultimatePower", "value": 0.1, "isMultiplier": true }
+      ],
+      "imageKey": "equip_dream_sword",
+      "description": "夢の力を凝縮した伝説の剣。必殺技の威力も上昇する。"
+    },
+    {
+      "id": "equip_night_armor",
+      "name": "ナイトアーマー",
+      "type": "armor",
+      "rarity": "SSR",
+      "effects": [
+        { "stat": "defense", "value": 60, "isMultiplier": false },
+        { "stat": "hp", "value": 200, "isMultiplier": false },
+        { "stat": "speed", "value": 10, "isMultiplier": false }
+      ],
+      "imageKey": "equip_night_armor",
+      "description": "夜を守る伝説の鎧。全ての防御ステータスが大幅に上昇。"
+    },
+    {
+      "id": "equip_nightmare_blade",
+      "name": "ナイトメアブレイド",
+      "type": "weapon",
+      "rarity": "SR",
+      "effects": [
+        { "stat": "attack", "value": 50, "isMultiplier": false },
+        { "stat": "critRate", "value": 15, "isMultiplier": false }
+      ],
+      "imageKey": "equip_nightmare_blade",
+      "description": "悪夢の力を封じ込めた剣。高いクリティカル率を誇る。"
+    }
+  ]
+}
