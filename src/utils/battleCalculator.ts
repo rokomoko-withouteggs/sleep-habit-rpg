@@ -3,7 +3,7 @@
 // 仕様書のダメージ計算式に準拠
 // ========================================
 
-import { BattleUnit, ActiveBuff, BuffStatType } from '@/types'
+import { BattleUnit, ActiveBuff, BuffStatType } from '../types'
 
 /**
  * バフ込みのステータスを計算
@@ -171,152 +171,152 @@ export function processBuffTurns(buffs: ActiveBuff[]): ActiveBuff[] {
   return buffs
     .map((buff) => ({
       ...buff,
-            remainingTurns: buff.remainingTurns - 1,
-          }))
-          .filter((buff) => buff.remainingTurns > 0)
-      }
-      
-      /**
-       * 必殺ゲージを更新
-       * 仕様書: 攻撃する/されるで +1、最大5で必殺可能
-       */
-      export function updateUltimateGauge(
-        unit: BattleUnit,
-        amount: number,
-        maxGauge: number = 5
-      ): number {
-        const newGauge = Math.min(maxGauge, Math.max(0, unit.ultimateGauge + amount))
-        return newGauge
-      }
-      
-      /**
-       * ユニットが行動可能かチェック
-       */
-      export function canAct(unit: BattleUnit): boolean {
-        return unit.currentHp > 0
-      }
-      
-      /**
-       * 必殺技が使用可能かチェック
-       */
-      export function canUseUltimate(unit: BattleUnit, requiredGauge: number = 5): boolean {
-        return unit.ultimateGauge >= requiredGauge && unit.currentHp > 0
-      }
-      
-      /**
-       * スキルが使用可能かチェック（CT確認）
-       */
-      export function canUseSkill(unit: BattleUnit, skillId: string): boolean {
-        const cooldown = unit.skillCooldowns[skillId] || 0
-        return cooldown === 0 && unit.currentHp > 0
-      }
-      
-      /**
-       * ダメージを適用
-       */
-      export function applyDamage(unit: BattleUnit, damage: number): BattleUnit {
-        const newHp = Math.max(0, unit.currentHp - damage)
-        return {
-          ...unit,
-          currentHp: newHp,
-          // 被ダメージで必殺ゲージ+1
-          ultimateGauge: updateUltimateGauge(unit, 1),
-        }
-      }
-      
-      /**
-       * 回復を適用
-       */
-      export function applyHeal(unit: BattleUnit, healAmount: number): BattleUnit {
-        const newHp = Math.min(unit.maxHp, unit.currentHp + healAmount)
-        return {
-          ...unit,
-          currentHp: newHp,
-        }
-      }
-      
-      /**
-       * バフを適用
-       */
-      export function applyBuff(
-        unit: BattleUnit,
-        buffType: BuffStatType,
-        value: number,
-        duration: number,
-        isDebuff: boolean = false
-      ): BattleUnit {
-        const newBuff: ActiveBuff = {
-          effectType: buffType,
-          value,
-          remainingTurns: duration,
-          isDebuff,
-        }
-        
-        return {
-          ...unit,
-          buffs: [...unit.buffs, newBuff],
-        }
-      }
-      
-      /**
-       * 防御状態を設定
-       */
-      export function setDefending(unit: BattleUnit, isDefending: boolean): BattleUnit {
-        return {
-          ...unit,
-          isDefending,
-        }
-      }
-      
-      /**
-       * 戦闘結果の経験値を計算
-       */
-      export function calculateBattleExp(
-        enemyLevels: number[],
-        playerLevel: number,
-        victory: boolean
-      ): number {
-        if (!victory) return 0
-        
-        const baseExp = enemyLevels.reduce((sum, level) => {
-          const levelDiff = level - playerLevel
-          const modifier = 1 + levelDiff * 0.1
-          return sum + Math.round(10 * level * Math.max(0.5, modifier))
-        }, 0)
-        
-        return baseExp
-      }
-      
-      /**
-       * セミオート行動を決定
-       */
-      export function determineAutoAction(
-        unit: BattleUnit,
-        allies: BattleUnit[],
-        enemies: BattleUnit[],
-        _availableSkills: string[]
-      ): { actionType: 'attack' | 'skill' | 'ultimate' | 'defend'; targetId: string; skillId?: string } {
-        const aliveEnemies = enemies.filter((e) => e.currentHp > 0)
-        const aliveAllies = allies.filter((a) => a.currentHp > 0)
-        
-        if (aliveEnemies.length === 0) {
-          return { actionType: 'defend', targetId: unit.id }
-        }
-        
-        // 必殺技が使えるなら使う
-        if (canUseUltimate(unit)) {
-          // HPが一番低い敵を狙う
-          const target = [...aliveEnemies].sort((a, b) => a.currentHp - b.currentHp)[0]
-          return { actionType: 'ultimate', targetId: target.id }
-        }
-        
-        // HPが低い味方がいたら回復（ヒーラーの場合）
-        const lowHpAlly = aliveAllies.find((a) => a.currentHp / a.maxHp < 0.3)
-        if (lowHpAlly && unit.id !== lowHpAlly.id) {
-          // スキルで回復できるならスキル使用（簡略化）
-        }
-        
-        // 通常攻撃
-        const target = [...aliveEnemies].sort((a, b) => a.currentHp - b.currentHp)[0]
-        return { actionType: 'attack', targetId: target.id }
-      }
+      remainingTurns: buff.remainingTurns - 1,
+    }))
+    .filter((buff) => buff.remainingTurns > 0)
+}
+
+/**
+ * 必殺ゲージを更新
+ * 仕様書: 攻撃する/されるで +1、最大5で必殺可能
+ */
+export function updateUltimateGauge(
+  unit: BattleUnit,
+  amount: number,
+  maxGauge: number = 5
+): number {
+  const newGauge = Math.min(maxGauge, Math.max(0, unit.ultimateGauge + amount))
+  return newGauge
+}
+
+/**
+ * ユニットが行動可能かチェック
+ */
+export function canAct(unit: BattleUnit): boolean {
+  return unit.currentHp > 0
+}
+
+/**
+ * 必殺技が使用可能かチェック
+ */
+export function canUseUltimate(unit: BattleUnit, requiredGauge: number = 5): boolean {
+  return unit.ultimateGauge >= requiredGauge && unit.currentHp > 0
+}
+
+/**
+ * スキルが使用可能かチェック（CT確認）
+ */
+export function canUseSkill(unit: BattleUnit, skillId: string): boolean {
+  const cooldown = unit.skillCooldowns[skillId] || 0
+  return cooldown === 0 && unit.currentHp > 0
+}
+
+/**
+ * ダメージを適用
+ */
+export function applyDamage(unit: BattleUnit, damage: number): BattleUnit {
+  const newHp = Math.max(0, unit.currentHp - damage)
+  return {
+    ...unit,
+    currentHp: newHp,
+    // 被ダメージで必殺ゲージ+1
+    ultimateGauge: updateUltimateGauge(unit, 1),
+  }
+}
+
+/**
+ * 回復を適用
+ */
+export function applyHeal(unit: BattleUnit, healAmount: number): BattleUnit {
+  const newHp = Math.min(unit.maxHp, unit.currentHp + healAmount)
+  return {
+    ...unit,
+    currentHp: newHp,
+  }
+}
+
+/**
+ * バフを適用
+ */
+export function applyBuff(
+  unit: BattleUnit,
+  buffType: BuffStatType,
+  value: number,
+  duration: number,
+  isDebuff: boolean = false
+): BattleUnit {
+  const newBuff: ActiveBuff = {
+    effectType: buffType,
+    value,
+    remainingTurns: duration,
+    isDebuff,
+  }
+  
+  return {
+    ...unit,
+    buffs: [...unit.buffs, newBuff],
+  }
+}
+
+/**
+ * 防御状態を設定
+ */
+export function setDefending(unit: BattleUnit, isDefending: boolean): BattleUnit {
+  return {
+    ...unit,
+    isDefending,
+  }
+}
+
+/**
+ * 戦闘結果の経験値を計算
+ */
+export function calculateBattleExp(
+  enemyLevels: number[],
+  playerLevel: number,
+  victory: boolean
+): number {
+  if (!victory) return 0
+  
+  const baseExp = enemyLevels.reduce((sum, level) => {
+    const levelDiff = level - playerLevel
+    const modifier = 1 + levelDiff * 0.1
+    return sum + Math.round(10 * level * Math.max(0.5, modifier))
+  }, 0)
+  
+  return baseExp
+}
+
+/**
+ * セミオート行動を決定
+ */
+export function determineAutoAction(
+  unit: BattleUnit,
+  allies: BattleUnit[],
+  enemies: BattleUnit[],
+  _availableSkills: string[]
+): { actionType: 'attack' | 'skill' | 'ultimate' | 'defend'; targetId: string; skillId?: string } {
+  const aliveEnemies = enemies.filter((e) => e.currentHp > 0)
+  const aliveAllies = allies.filter((a) => a.currentHp > 0)
+  
+  if (aliveEnemies.length === 0) {
+    return { actionType: 'defend', targetId: unit.id }
+  }
+  
+  // 必殺技が使えるなら使う
+  if (canUseUltimate(unit)) {
+    // HPが一番低い敵を狙う
+    const target = [...aliveEnemies].sort((a, b) => a.currentHp - b.currentHp)[0]
+    return { actionType: 'ultimate', targetId: target.id }
+  }
+  
+  // HPが低い味方がいたら回復（ヒーラーの場合）
+  const lowHpAlly = aliveAllies.find((a) => a.currentHp / a.maxHp < 0.3)
+  if (lowHpAlly && unit.id !== lowHpAlly.id) {
+    // スキルで回復できるならスキル使用（簡略化）
+  }
+  
+  // 通常攻撃
+  const target = [...aliveEnemies].sort((a, b) => a.currentHp - b.currentHp)[0]
+  return { actionType: 'attack', targetId: target.id }
+}
